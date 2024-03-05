@@ -1,3 +1,7 @@
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+}, false);
+
 console.log("hello")
 var i2 = 0;
 var j=0;
