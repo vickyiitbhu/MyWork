@@ -103,12 +103,13 @@ body::-webkit-scrollbar {
 }
 .background-clip{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    /* right: 0; */
+    /* bottom: 0; */
     z-index: -1;
     opacity: 0.8;
     width: 100%;
-    height: auto;
+    height: 432.92px;
+    object-fit: cover;
 }
 
 /* @media (min-aspect-ratio:16/9) {
@@ -221,7 +222,7 @@ body::-webkit-scrollbar {
 }
 #services_heading{
     /* border: 1px solid red; */
-    margin-top: 80px;
+    /* margin-top: 80px; */
     text-align: center;
     font-size: 1.8rem;
 }
@@ -238,7 +239,7 @@ body::-webkit-scrollbar {
 .services_data{
     /* box-sizing: border-box; */
     width: 48%;
-    height: 310px;
+    /* height: 310px; */
     border: 2px solid rgb(92, 222, 181);
     border-radius: 7px;
     /* margin: auto; */
@@ -257,8 +258,9 @@ body::-webkit-scrollbar {
     /* margin: auto; */
 }
 .services_data_img{
-    height: 150px;
-    width: 300px;
+    /* height: 150px; */
+    width: 50%;
+    aspect-ratio: 2/1;
     /* border: 1px solid red; */
     margin: auto;
 }
@@ -271,7 +273,7 @@ body::-webkit-scrollbar {
 }
 .services_data_heading{
     text-align: center;
-    height: 50px;
+    /* height: 50px; */
     width: 100%;
     /* border: 1px solid red; */
 }
@@ -282,15 +284,15 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 .services_data_content{
-    height: 100px;
-    width: 450px;
+    /* height: 100px; */
+    width: 80%;
     margin: auto;
     /* border: 1px solid red; */
 }
 
 #about_company{
     /* border: 1px solid black; */
-    height: 600px;
+    /* height: 600px; */
     display: flex;
     flex-direction: row;
 }
@@ -298,17 +300,30 @@ body::-webkit-scrollbar {
     width: 50%;
     /* border: 1px solid red; */
     margin-top: 20px;
+    overflow: hidden;
 }
 #about_head h1{
     margin-bottom: 50px;
 }
 .scrollabout{
     transform: translateX(0%);
-    animation: slidingabout 7s linear 1;
+    animation: slidingabout 2s linear 1;
 }
 @keyframes slidingabout {
     0%{
         transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.scrollabout_head{
+    transform: translateX(0%);
+    animation: slidingabout_head 2s linear 1;
+}
+@keyframes slidingabout_head {
+    0%{
+        transform: translateX(100%);
     }
     100%{
         transform: translateX(0%);
@@ -325,24 +340,30 @@ body::-webkit-scrollbar {
     /* position: relative; */
     border: 2px solid rgb(227, 147, 147);
     border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    height: 280px;
-    width: 180px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-top: 5px;
+    /* height: 280px; */
+    width: 30%;
+    /* aspect-ratio: 180/280; */
     margin: auto;
+    margin-bottom: 10px;
     /* filter: blur(0); */
 }
 .about_content:hover{
     cursor: pointer;
     position: relative;
-    width: 185px;
+    width: 30.8%;
     box-shadow:0 2px 2px red, -0.4em 0  .4em red;
 }
 .about_content_img{
     /* border: 1px solid black; */
-    height: 70px;
-    width: 70px;
-    margin: 30px auto 30px auto;
+    /* height: 70px; */
+    width: 38.80%;
+    aspect-ratio: 1/1;
+    /* margin: 30px auto 30px auto; */
+    margin: auto;
+    margin-top: 10px;
 }
 .about_content_img img{
     height: 100%;
@@ -351,11 +372,13 @@ body::-webkit-scrollbar {
 .about_content_content
 {
     /* border: 1px solid black; */
-    margin-top: 10px;
+    
     /* height: 20px; */
-    width: 170px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     text-align: center;
     justify-content: center;
 }
@@ -374,12 +397,12 @@ body::-webkit-scrollbar {
 #about_content_4
 {
    position: relative;
-   right: 34px;
+   right: 7%;
 }
 
 #about_content_5{
     position: relative;
-    left: 34px;
+    left: 7%;
 }
 
 #our_partners{
@@ -407,15 +430,20 @@ body::-webkit-scrollbar {
 .partner_box{
     border: 1px solid black;
     width: 24.8%;
-    height: 150px;
+    /* height: 150px; */
+    aspect-ratio: 1/1;
     margin: auto;
     margin-top: 2px;
+    display: flex;
+    flex-direction: column;
     /* margin-left: 1px; */
 }
 .partner_box img{
     width: 60%;
     height: 60%;
-    margin: 2px 30px 0px 30px;
+    /* margin: 2px auto 0px auto; */
+    margin: auto;
+
 }
 .partner_box h3{
     text-align: center;

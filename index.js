@@ -81,3 +81,35 @@ for(var i=0;i<partners_name.length;i++)
 }
 
 
+//for sliding effect in about section 
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log('Target div is visible!');
+      document.getElementById("scrollabout").className="scrollabout";
+      document.getElementById("scrollabout_head").className="scrollabout_head";
+      // document.getElementById("scrollabout").className="revealing-text";
+      // document.getElementById("scrollabout").className="reveal";
+
+
+    }
+    else {
+      // The target div is not currently visible on the screen
+      console.log('Target div is not visible!');
+      document.getElementById("scrollabout").classList.remove("scrollabout");
+      document.getElementById("scrollabout_head").classList.remove("scrollabout_head");
+    }
+  });
+}
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+let observer = new IntersectionObserver(handleIntersection, options);
+let target = document.getElementById("about_company");
+observer.observe(target);
+
+
+
